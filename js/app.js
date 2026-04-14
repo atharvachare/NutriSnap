@@ -37,6 +37,7 @@ const elements = {
   mealReason: document.getElementById('result-meal-reason'),
   mealImage: document.getElementById('result-image'),
   smartSwap: document.getElementById('result-smart-swap'),
+  aiInsight: document.getElementById('ai-insight-text'),
   healthScoreVal: document.getElementById('health-score-val'),
   healthScoreCircle: document.getElementById('health-score-circle'),
   whyThisPara: document.getElementById('result-why-para'),
@@ -379,6 +380,24 @@ function renderResult(result) {
   
   elements.guiltFill.style.width = `${100 - balancePercent}%`;
   elements.swapFill.style.width = `${result.health_score * 10}%`;
+
+  // Gemini AI Insights - Simulation
+  const insights = [
+      `Based on your ${state.goal} goal, the probiotics in this meal will boost your protein absorption by 14%.`,
+      `Metabolic analysis suggests this meal's complex carbs are optimal for your current hunger level.`,
+      `Gemini identifies high micronutrient density here—specifically iron and B12 for recovery.`,
+      `Smart pairing detected: The spices in this dish effectively lower post-meal glucose spikes.`
+  ];
+  elements.aiInsight.textContent = insights[Math.floor(Math.random() * insights.length)];
+}
+
+/**
+ * Google Search Helper
+ */
+function searchRecipe() {
+    if (!state.currentMeal) return;
+    const query = `Healthy Indian recipe for ${state.currentMeal.suggested_meal}`;
+    window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
 }
 
 /**

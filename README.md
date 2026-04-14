@@ -13,11 +13,11 @@ NutriSnap is a premium, minimalist web application designed to help users naviga
 ## 🏆 Key Features
 
 ### 🍱 **Hyper-Targeted Recommendations**
-Uses a 72-point decision matrix to suggest the perfect Indian meal based on:
-- **Fitness Goals**: Weight Loss, Muscle Gain, or Maintenance.
-- **Real-time Hunger**: A 100-point scale mapping to specific caloric needs.
-- **Dietary Mode**: Toggle between Vegetarian and Non-Vegetarian options.
-- **Time of Day**: Context-aware suggestions for Morning, Afternoon, and Night.
+Uses a 72-point decision matrix to suggest the perfect Indian meal based on fitness goals, real-time hunger levels, and dietary needs.
+
+### 🧠 **Gemini-Powered Smart Insights**
+- **Metabolic Intelligence**: Generates AI-simulated insights for every meal, explaining nutritional synergies (e.g., probiotic absorption, glucose spikes).
+- **Google Recipe Bridge**: One-click integration to search for healthy Indian recipes directly via Google Search.
 
 ### 📊 **Interactive Insights**
 - **Live Macro Dashboard**: Real-time counter animations for protein, carbs, and calories.

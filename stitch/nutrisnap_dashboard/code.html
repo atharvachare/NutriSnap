@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriSnap Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#003840",
+                    "tertiary-fixed": "#00e3fd",
+                    "outline": "#747674",
+                    "error-container": "#9f0519",
+                    "outline-variant": "#474847",
+                    "secondary-container": "#2f4d3b",
+                    "background": "#0d0f0e",
+                    "inverse-surface": "#faf9f7",
+                    "primary-fixed-dim": "#00ec91",
+                    "on-secondary-fixed-variant": "#43624f",
+                    "secondary-fixed": "#c8ebd2",
+                    "tertiary-dim": "#00d4ec",
+                    "on-primary-container": "#005b34",
+                    "secondary": "#c8ebd2",
+                    "on-secondary-fixed": "#274634",
+                    "inverse-primary": "#006d40",
+                    "on-primary-fixed-variant": "#00653b",
+                    "on-secondary-container": "#b6d9c1",
+                    "on-tertiary": "#005762",
+                    "on-secondary": "#395846",
+                    "surface-dim": "#0d0f0e",
+                    "surface-bright": "#2a2d2b",
+                    "surface-container-low": "#121413",
+                    "surface-container": "#181a19",
+                    "on-error": "#490006",
+                    "primary-fixed": "#00fc9b",
+                    "secondary-fixed-dim": "#baddc5",
+                    "tertiary-fixed-dim": "#00d4ec",
+                    "surface-container-lowest": "#000000",
+                    "secondary-dim": "#baddc5",
+                    "on-surface": "#f7f6f4",
+                    "tertiary": "#81ecff",
+                    "on-tertiary-fixed-variant": "#005762",
+                    "surface-variant": "#242625",
+                    "surface-tint": "#a0ffc3",
+                    "surface-container-high": "#1e201f",
+                    "error": "#ff716c",
+                    "error-dim": "#d7383b",
+                    "inverse-on-surface": "#545554",
+                    "on-background": "#f7f6f4",
+                    "on-surface-variant": "#aaaba9",
+                    "on-primary-fixed": "#004527",
+                    "on-primary": "#00643a",
+                    "primary": "#a0ffc3",
+                    "surface": "#0d0f0e",
+                    "primary-container": "#00fc9b",
+                    "primary-dim": "#00ec91",
+                    "on-error-container": "#ffa8a3",
+                    "surface-container-highest": "#242625",
+                    "on-tertiary-container": "#004d57",
+                    "tertiary-container": "#00e3fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0d0f0e; color: #f7f6f4; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .text-glow { text-shadow: 0 0 12px rgba(0, 252, 155, 0.4); }
+        .neon-shadow { shadow: 0 0 20px rgba(0, 252, 155, 0.2); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-gradient-to-b from-[#121413] to-transparent">
+<div class="flex flex-col">
+<h1 class="text-2xl font-black text-[#00FF9D] tracking-tighter font-headline">NutriSnap</h1>
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-slate-400">Make smarter food choices instantly</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#00FF9D] hover:opacity-80 transition-opacity">menu</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile photo" data-alt="Professional headshot of a smiling woman with a modern tech aesthetic and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNW28ZJKs5PMYuF9N2mAmRyAORteO3Ul10vfV1sPpNech5P27JiBTgrtR4gLqAM1PBuxXh8Ua23KHmpkclpY5dtlEXQeit_dRZObexfpcBiwtOdXxAkX1tDsGpcc4xKaWYHnAiiH9_q7KX6zGiRpE2A1DnOFZFlYAVvRFn1Sv0EM3xjoT_Mc1VFwNUubvRqaJFSV-eknXQYu9z3eS6AgtziIMFJ_rimwRfK-VDYsFHJqpHgQ7asqqIyLQmOs0iR_KOXJobJkM9lL8"/>
+</div>
+</div>
+</header>
+<main class="pt-28 px-6 max-w-2xl mx-auto">
+<!-- Hero Section / Editorial Headline -->
+<section class="mb-10">
+<h2 class="text-4xl font-headline font-extrabold tracking-tight mb-2">Ready to <span class="text-primary italic">Fuel?</span></h2>
+<p class="text-on-surface-variant font-body">Adjust your dials and let the AI find your optimal meal.</p>
+</section>
+<!-- Input Card (The Control Center) -->
+<div class="bg-surface-container-high rounded-[24px] p-6 mb-8 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
+<div class="space-y-8 relative z-10">
+<!-- Goal Segmented Control -->
+<div>
+<label class="text-[11px] font-label font-bold uppercase tracking-widest text-primary mb-4 block">Primary Goal</label>
+<div class="grid grid-cols-3 bg-surface-container-lowest p-1 rounded-xl">
+<button class="py-3 px-2 rounded-lg bg-primary-container text-on-primary-container text-xs font-bold transition-all shadow-lg">Weight Loss</button>
+<button class="py-3 px-2 rounded-lg text-slate-400 text-xs font-semibold hover:text-on-surface transition-colors">Muscle Gain</button>
+<button class="py-3 px-2 rounded-lg text-slate-400 text-xs font-semibold hover:text-on-surface transition-colors">Maintain</button>
+</div>
+</div>
+<!-- Hunger Level Control -->
+<div>
+<label class="text-[11px] font-label font-bold uppercase tracking-widest text-primary mb-4 block">Hunger Level</label>
+<div class="flex gap-2">
+<button class="flex-1 py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-xl text-[10px] font-bold uppercase tracking-tighter hover:bg-surface-container-highest transition-colors">Low</button>
+<button class="flex-1 py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-xl text-[10px] font-bold uppercase tracking-tighter hover:bg-surface-container-highest transition-colors">Med</button>
+<button class="flex-1 py-3 bg-primary/10 border border-primary/30 rounded-xl text-[10px] font-bold uppercase tracking-tighter text-primary">High</button>
+<button class="flex-1 py-3 bg-surface-container-lowest border border-outline-variant/10 rounded-xl text-[10px] font-bold uppercase tracking-tighter hover:bg-surface-container-highest transition-colors">Craving</button>
+</div>
+</div>
+<!-- Time Control -->
+<div>
+<label class="text-[11px] font-label font-bold uppercase tracking-widest text-primary mb-4 block">Timing</label>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/10 cursor-pointer hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-sm text-tertiary">wb_twilight</span>
+<span class="text-xs font-semibold">Morning</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl border border-primary/40 cursor-pointer shadow-[0_0_15px_rgba(0,252,155,0.05)]">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+<span class="text-xs font-bold text-primary">Afternoon</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl border border-outline-variant/10 cursor-pointer hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-sm text-slate-500">bedtime</span>
+<span class="text-xs font-semibold">Night</span>
+</div>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-extrabold text-lg rounded-2xl shadow-[0_8px_30px_rgba(0,252,155,0.2)] active:scale-95 transition-all flex items-center justify-center gap-3 group">
+<span>Suggest Food</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">bolt</span>
+</button>
+</div>
+</div>
+<!-- Empty State -->
+<div class="flex flex-col items-center justify-center py-16 px-8 text-center border-2 border-dashed border-outline-variant/15 rounded-[32px] bg-surface-container-low/50">
+<div class="w-20 h-20 bg-surface-container-high rounded-full flex items-center justify-center mb-6 shadow-inner">
+<span class="material-symbols-outlined text-4xl text-primary/40" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Awaiting your mood</h3>
+<p class="text-on-surface-variant text-sm max-w-[240px]">Tell us your mood and we’ll suggest the perfect meal.</p>
+</div>
+<!-- Hidden/Example AI Result Card (Pre-populated for visual reference) -->
+<div class="mt-8 space-y-6 opacity-30 grayscale blur-[2px] pointer-events-none">
+<div class="bg-surface-container-high rounded-[24px] p-6 overflow-hidden relative border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-[10px] font-bold uppercase tracking-widest rounded-full mb-3 inline-block">AI Recommended</span>
+<h3 class="text-2xl font-headline font-bold">Quinoa &amp; Roasted Salmon</h3>
+</div>
+<div class="relative w-16 h-16 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-lowest" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="176" stroke-dashoffset="35" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute text-xs font-black">82</span>
+</div>
+</div>
+<div class="flex gap-4 mb-6">
+<img alt="Suggested Meal" class="w-full h-40 object-cover rounded-xl" data-alt="Gourmet roasted salmon fillet with vibrant quinoa salad and fresh herbs on a dark ceramic plate with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTklSEhzMB2hx_Mp9qoIA3AS4Y7YdYOBsoSv2-pnrSuMRBOQKsstvawyTDa4L6wXxsY3MwePZMW5qzylagI6KZGfSsPNyYfWwUe4uG-U3BiISBtfKm2NWdMgxrbwn1SSa1xVSHq89SSlaoFwVSfYTsGNw6GPhbBWjQlRAzj9TFO8RY3T6j3cOpTnZU3n8LjUJ6cLlMexPQxvzZBgTCxYZQfxJhC57grm9A8sscxPByfcs5kjSLUnNx8NOf1QR423yYblH2t8CGVDQ"/>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border-l-4 border-tertiary">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-tertiary text-lg">swap_horiz</span>
+<span class="text-[10px] font-bold uppercase tracking-widest text-tertiary-fixed">Smart Swap</span>
+</div>
+<p class="text-sm">Replace white rice with <span class="text-on-surface font-bold">Cauliflower Rice</span> to save 120 calories.</p>
+</div>
+</div>
+<!-- Guilt Meter -->
+<div class="bg-surface-container-high rounded-2xl p-6">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-xs font-bold uppercase tracking-widest">Guilt Meter</h4>
+<span class="text-xs text-primary font-medium">Eco-Balanced</span>
+</div>
+<div class="h-3 w-full bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="h-full bg-error w-1/4 rounded-l-full"></div>
+<div class="h-full bg-tertiary w-1/4"></div>
+<div class="h-full bg-primary w-1/2 rounded-r-full shadow-[0_0_15px_rgba(0,252,155,0.4)]"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[9px] text-slate-500 font-bold">INDULGENT</span>
+<span class="text-[9px] text-primary font-bold">VIBRANT</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#1e201f]/60 backdrop-blur-xl rounded-t-[32px] border-t border-[#474847]/15 shadow-[0_-8px_32px_rgba(0,255,157,0.08)]">
+<div class="flex flex-col items-center justify-center text-[#00FF9D] bg-[#00FF9D]/10 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined" data-icon="photo_camera" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Scan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-[#a0ffc3] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Plan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-[#a0ffc3] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-[#a0ffc3] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

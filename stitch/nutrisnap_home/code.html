@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriSnap Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#222a3d",
+                    "surface-container-lowest": "#060e20",
+                    "tertiary-container": "#28c38a",
+                    "primary-container": "#22c55e",
+                    "surface": "#0b1326",
+                    "on-primary-fixed-variant": "#005321",
+                    "on-surface-variant": "#bccbb9",
+                    "on-primary-container": "#004b1e",
+                    "surface-tint": "#4ae176",
+                    "on-tertiary": "#003824",
+                    "secondary-fixed": "#c9e6ff",
+                    "tertiary-fixed": "#6ffbbe",
+                    "surface-variant": "#2d3449",
+                    "on-tertiary-container": "#004a31",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#002109",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#0b1326",
+                    "primary-fixed": "#6bff8f",
+                    "surface-bright": "#31394d",
+                    "outline-variant": "#3d4a3d",
+                    "secondary": "#89ceff",
+                    "inverse-surface": "#dae2fd",
+                    "surface-container": "#171f33",
+                    "secondary-container": "#00a2e6",
+                    "secondary-fixed-dim": "#89ceff",
+                    "inverse-on-surface": "#283044",
+                    "primary-fixed-dim": "#4ae176",
+                    "surface-container-highest": "#2d3449",
+                    "on-error-container": "#ffdad6",
+                    "outline": "#869585",
+                    "on-surface": "#dae2fd",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#006e2f",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "on-primary": "#003915",
+                    "on-secondary-container": "#00344e",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "primary": "#4be277",
+                    "on-background": "#dae2fd",
+                    "tertiary": "#50dfa4",
+                    "on-secondary": "#00344d",
+                    "surface-container-low": "#131b2e",
+                    "on-tertiary-fixed": "#002113",
+                    "background": "#0b1326"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: #171f33;
+            border-radius: 16px;
+        }
+        .vibrant-glow {
+            box-shadow: 0px 0px 15px rgba(75, 226, 119, 0.4);
+        }
+        .bg-radial-glow {
+            background: radial-gradient(circle at top right, rgba(137, 206, 255, 0.05), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(75, 226, 119, 0.03), transparent 40%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface selection:bg-primary/30 min-h-screen pb-24 md:pb-0 bg-radial-glow">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl shadow-[0px_0px_15px_rgba(75,226,119,0.1)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#4be277] text-2xl" data-icon="nutrition">nutrition</span>
+<span class="font-manrope tracking-tighter font-bold text-2xl text-[#dae2fd]">NutriSnap</span>
+</div>
+<div class="flex items-center gap-6">
+<!-- Web Navigation Links -->
+<div class="hidden md:flex gap-8">
+<a class="text-[#4be277] font-bold font-label text-sm tracking-wide transition-all active:scale-95" href="#">Home</a>
+<a class="text-[#dae2fd] font-label text-sm tracking-wide hover:bg-[#171f33] transition-colors duration-300 px-3 py-1 rounded-lg" href="#">Plan</a>
+<a class="text-[#dae2fd] font-label text-sm tracking-wide hover:bg-[#171f33] transition-colors duration-300 px-3 py-1 rounded-lg" href="#">Insights</a>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20 hover:border-primary/50 transition-colors cursor-pointer active:scale-95 duration-200">
+<img alt="Profile" data-alt="close-up portrait of a fitness professional with a clean modern aesthetic and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALDLG4QHwVxa6Zn6zi1QuuS8ENPKdtC-ju4eaPFI_ISBpbp66rSdTF-iqiCweqfizKiKpHtgUtLN3L7PQFJwT6NmqQ3INVlAXRxF3u6ZaMTlKfQH5BwlczN0mj5CcexAlJC6GEYLpFoiJZKQeYcnihS2L6aeFf3T720d_X3hX7er-xGxr4rHGb9LIA9bzL04KbDF3jsheCd1C4glNbGmTwmiUAw2X56UglIAxdQdQhx9KLQRoIuI-w4pgI18dRWpHpmR4mAYqjAuQ"/>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-28 px-4 md:px-0 max-w-[900px] mx-auto min-h-screen">
+<!-- Welcome Section -->
+<header class="mb-10 text-left">
+<h1 class="font-headline font-extrabold text-4xl text-on-surface tracking-tighter mb-2">Good morning, Alex</h1>
+<p class="font-label text-on-surface-variant text-lg">Ready to optimize your fuel today?</p>
+</header>
+<!-- Main Input Card -->
+<section class="glass-card p-8 mb-12 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
+<div class="relative z-10">
+<h2 class="font-headline font-bold text-2xl text-on-surface mb-1">Tell us your current state</h2>
+<p class="font-label text-on-surface-variant text-sm mb-8">AI-powered meal suggestions based on your biology and goals.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Goal Selection -->
+<div class="space-y-3">
+<label class="font-label text-xs uppercase tracking-[0.15em] text-primary font-bold">Goal</label>
+<div class="grid grid-cols-3 gap-2 p-1 bg-surface-container-lowest rounded-xl">
+<button class="py-2.5 px-2 text-xs font-semibold rounded-lg bg-primary text-on-primary shadow-lg transition-transform active:scale-95">Weight Loss</button>
+<button class="py-2.5 px-2 text-xs font-semibold rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all">Muscle Gain</button>
+<button class="py-2.5 px-2 text-xs font-semibold rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-all">Maintain</button>
+</div>
+</div>
+<!-- Time of Day -->
+<div class="space-y-3">
+<label class="font-label text-xs uppercase tracking-[0.15em] text-primary font-bold">Time of Day</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border-none rounded-xl py-3 px-4 text-on-surface font-medium focus:ring-2 focus:ring-primary/40 appearance-none transition-all">
+<option>Morning</option>
+<option selected="">Afternoon</option>
+<option>Night</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Hunger Level (Segmented) -->
+<div class="md:col-span-2 space-y-3">
+<label class="font-label text-xs uppercase tracking-[0.15em] text-primary font-bold">Hunger Level</label>
+<div class="flex flex-wrap gap-3">
+<button class="flex-1 min-w-[100px] py-4 rounded-2xl bg-surface-container-low border-b-2 border-transparent hover:border-primary/30 text-on-surface-variant hover:text-on-surface transition-all flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+<span class="text-xs font-medium">Low</span>
+</button>
+<button class="flex-1 min-w-[100px] py-4 rounded-2xl bg-surface-container-low border-b-2 border-primary text-primary transition-all flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-xl" data-icon="sentiment_neutral">sentiment_neutral</span>
+<span class="text-xs font-medium">Med</span>
+</button>
+<button class="flex-1 min-w-[100px] py-4 rounded-2xl bg-surface-container-low border-b-2 border-transparent hover:border-primary/30 text-on-surface-variant hover:text-on-surface transition-all flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors" data-icon="sentiment_dissatisfied">sentiment_dissatisfied</span>
+<span class="text-xs font-medium">High</span>
+</button>
+<button class="flex-1 min-w-[100px] py-4 rounded-2xl bg-surface-container-low border-b-2 border-transparent hover:border-primary/30 text-on-surface-variant hover:text-on-surface transition-all flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors" data-icon="restaurant">restaurant</span>
+<span class="text-xs font-medium">Craving</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-12 flex justify-center">
+<button class="group relative px-12 py-5 bg-primary text-on-primary font-headline font-extrabold text-lg rounded-full vibrant-glow hover:scale-[1.02] active:scale-95 transition-all duration-300 overflow-hidden">
+<span class="relative z-10 flex items-center gap-2">
+                            Suggest Food
+                            <span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</span>
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-[#22c55e] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+</div>
+</div>
+</section>
+<!-- Empty State Section -->
+<section class="flex flex-col items-center justify-center py-16 text-center">
+<div class="relative mb-8">
+<div class="w-24 h-24 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 relative z-10">
+<span class="material-symbols-outlined text-primary text-5xl opacity-40" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<!-- Ambient Glow behind icon -->
+<div class="absolute inset-0 bg-primary/10 blur-2xl rounded-full scale-150"></div>
+</div>
+<div class="max-w-md mx-auto">
+<h3 class="font-headline font-bold text-xl text-on-surface mb-2">Awaiting your vitals</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">Tell us your goal and mood, and we’ll snap the best meal for you with precise macro calculations and local availability.</p>
+</div>
+</section>
+<!-- Visual Bento Hint (Subtle background element) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-10 pointer-events-none mb-24">
+<div class="h-32 bg-surface-container rounded-3xl border border-outline/10"></div>
+<div class="h-32 col-span-2 bg-surface-container rounded-3xl border border-outline/10"></div>
+<div class="h-32 bg-surface-container rounded-3xl border border-outline/10"></div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<div class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1326]/80 backdrop-blur-lg rounded-t-3xl shadow-[0_-10px_40px_rgba(75,226,119,0.08)] z-50">
+<a class="flex flex-col items-center justify-center bg-[#22c55e]/20 text-[#4be277] rounded-2xl px-4 py-2 ring-1 ring-[#4be277]/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#dae2fd]/60 px-4 py-2 hover:text-[#4be277] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium mt-1">Plan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#dae2fd]/60 px-4 py-2 hover:text-[#4be277] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium mt-1">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#dae2fd]/60 px-4 py-2 hover:text-[#4be277] transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium mt-1">Profile</span>
+</a>
+</div>
+</body></html>

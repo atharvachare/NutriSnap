@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriSnap - Analysis Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container-high": "#222a3d",
+                  "surface-container-lowest": "#060e20",
+                  "tertiary-container": "#28c38a",
+                  "primary-container": "#22c55e",
+                  "surface": "#0b1326",
+                  "on-primary-fixed-variant": "#005321",
+                  "on-surface-variant": "#bccbb9",
+                  "on-primary-container": "#004b1e",
+                  "surface-tint": "#4ae176",
+                  "on-tertiary": "#003824",
+                  "secondary-fixed": "#c9e6ff",
+                  "tertiary-fixed": "#6ffbbe",
+                  "surface-variant": "#2d3449",
+                  "on-tertiary-container": "#004a31",
+                  "on-error": "#690005",
+                  "on-primary-fixed": "#002109",
+                  "error": "#ffb4ab",
+                  "surface-dim": "#0b1326",
+                  "primary-fixed": "#6bff8f",
+                  "surface-bright": "#31394d",
+                  "outline-variant": "#3d4a3d",
+                  "secondary": "#89ceff",
+                  "inverse-surface": "#dae2fd",
+                  "surface-container": "#171f33",
+                  "secondary-container": "#00a2e6",
+                  "secondary-fixed-dim": "#89ceff",
+                  "inverse-on-surface": "#283044",
+                  "primary-fixed-dim": "#4ae176",
+                  "surface-container-highest": "#2d3449",
+                  "on-error-container": "#ffdad6",
+                  "outline": "#869585",
+                  "on-surface": "#dae2fd",
+                  "error-container": "#93000a",
+                  "inverse-primary": "#006e2f",
+                  "on-secondary-fixed": "#001e2f",
+                  "on-tertiary-fixed-variant": "#005236",
+                  "on-primary": "#003915",
+                  "on-secondary-container": "#00344e",
+                  "on-secondary-fixed-variant": "#004c6e",
+                  "tertiary-fixed-dim": "#4edea3",
+                  "primary": "#4be277",
+                  "on-background": "#dae2fd",
+                  "tertiary": "#50dfa4",
+                  "on-secondary": "#00344d",
+                  "surface-container-low": "#131b2e",
+                  "on-tertiary-fixed": "#002113",
+                  "background": "#0b1326"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .health-ring {
+      background: conic-gradient(from 0deg, #4be277 80%, #171f33 80%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="bg-[#0b1326]/60 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0px_0px_15px_rgba(75,226,119,0.1)] flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#4be277]" data-icon="nutrition">nutrition</span>
+<h1 class="font-manrope tracking-tighter font-bold text-2xl text-[#dae2fd]">NutriSnap</h1>
+</div>
+<div class="active:scale-95 transition-transform">
+<img alt="user profile avatar" class="w-10 h-10 rounded-full border-2 border-primary/20" data-alt="close-up portrait of a fitness professional with a friendly smile, soft cinematic studio lighting, dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpFH3k9xERwXusRxwJQV9v9a_jR6u0doKcki3CgIrP6atp8XOspc6ECezOKM68sU54SywxWo82kade11ndMwe1Ef02N4m7L79Hsrwm3XkQnDye1KSAzzIQQjuebhsO6YT9UomFaAuXKm6B-l5TpjHnqVTdyI_Pv5THhbQFQxJyCh2W_UiqgDzrnjNNNmoYbbZU_zUs0uOhHdtfA4ld2qyOBjk7k6Krcx195zC_ch0VejZaG07JyQ5eKq9dnbJNlqegMm3sNP2r8Xw"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto space-y-8">
+<!-- Hero Result Card -->
+<section class="relative group">
+<div class="absolute -inset-0.5 bg-gradient-to-r from-primary to-tertiary rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+<div class="relative bg-surface-container rounded-3xl p-8 overflow-hidden">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-full md:w-1/2 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label text-xs font-bold tracking-widest uppercase">Analysis Complete</span>
+</div>
+<div class="space-y-2">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">Quinoa &amp; Zesty Lemon Salmon</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                High protein and low GI to support muscle gain without the heavy feeling.
+              </p>
+</div>
+<button class="group/btn flex items-center gap-3 px-6 py-4 bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-all duration-300 w-full md:w-auto">
+<span class="font-bold text-on-surface">Why This?</span>
+<span class="material-symbols-outlined text-primary group-hover/btn:translate-y-1 transition-transform" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<div class="w-full md:w-1/2 flex flex-col items-center justify-center space-y-6">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- Animated-like Circular Progress -->
+<div class="absolute inset-0 rounded-full border-[12px] border-surface-container-lowest"></div>
+<div class="absolute inset-0 rounded-full border-[12px] border-primary border-t-transparent border-l-transparent rotate-[135deg] shadow-[0_0_20px_rgba(75,226,119,0.3)]"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline text-5xl font-black text-primary">8.0</span>
+<span class="font-label text-xs text-on-surface-variant font-bold tracking-widest uppercase">Health Score</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Analysis Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Smart Swap Card -->
+<div class="bg-surface-container rounded-3xl p-6 border-l-4 border-secondary shadow-xl flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary/10 rounded-2xl">
+<span class="material-symbols-outlined text-secondary" data-icon="swap_horiz">swap_horiz</span>
+</div>
+<span class="text-secondary font-label text-[10px] font-bold tracking-widest uppercase">Smart Optimization</span>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline text-xl font-bold">Smart Swap</h3>
+<p class="text-on-surface-variant">
+            Swap white rice for <span class="text-secondary font-semibold">cauliflower rice</span> to save 120 calories while increasing fiber intake.
+          </p>
+</div>
+</div>
+<!-- Guilt Meter Card -->
+<div class="bg-surface-container rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+<div class="flex justify-between items-start mb-8">
+<div class="p-3 bg-tertiary/10 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary" data-icon="balance">balance</span>
+</div>
+<span class="text-tertiary font-label text-[10px] font-bold tracking-widest uppercase">Impact Balance</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-[10px] font-bold tracking-widest text-on-surface-variant uppercase">
+<span>Craving</span>
+<span>Smart Choice</span>
+</div>
+<div class="relative h-2 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-error/60 via-primary/40 to-primary"></div>
+<!-- Marker -->
+<div class="absolute right-[15%] top-1/2 -translate-y-1/2 w-4 h-4 bg-on-surface rounded-full border-2 border-primary shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+</div>
+<p class="text-sm font-medium text-center text-primary">Your choice aligns 85% with your fitness goals.</p>
+</div>
+</div>
+</div>
+<!-- Macro Breakdown (Extra Context) -->
+<section class="bg-surface-container-lowest rounded-3xl p-8">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[2px] flex-grow bg-gradient-to-r from-transparent to-outline-variant"></div>
+<h3 class="font-headline font-bold text-on-surface-variant whitespace-nowrap">Detailed Analysis</h3>
+<div class="h-[2px] flex-grow bg-gradient-to-l from-transparent to-outline-variant"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container/50 p-4 rounded-2xl text-center hover:bg-surface-container transition-colors">
+<span class="block text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Proteins</span>
+<span class="text-2xl font-headline font-bold text-primary">32g</span>
+</div>
+<div class="bg-surface-container/50 p-4 rounded-2xl text-center hover:bg-surface-container transition-colors">
+<span class="block text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Carbs</span>
+<span class="text-2xl font-headline font-bold text-secondary">24g</span>
+</div>
+<div class="bg-surface-container/50 p-4 rounded-2xl text-center hover:bg-surface-container transition-colors">
+<span class="block text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Fats</span>
+<span class="text-2xl font-headline font-bold text-tertiary">12g</span>
+</div>
+<div class="bg-surface-container/50 p-4 rounded-2xl text-center hover:bg-surface-container transition-colors">
+<span class="block text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-1">Fiber</span>
+<span class="text-2xl font-headline font-bold text-on-surface">8g</span>
+</div>
+</div>
+</section>
+<!-- Visual Suggestion Image -->
+<section class="rounded-3xl overflow-hidden h-64 relative group">
+<img alt="Meal Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="vibrant gourmet plate of grilled salmon fillet with lemon slices and fluffy quinoa pilaf, side of steamed greens, moody dark stone background, soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI8_UymGap0a7UvI45Kb3uyBjq8hV2zVo-5d1WwK9GUPus5YWQAixfQ0a_Cej3kYYJe85CjyWV1k8jxulAz6NwTV80qz1ibbz1N7P0yu2tatw3ygz2lqNueszQe3OiyU_5pZBIDB2vXLeshpfVD9XFaHK83Kq3Vhd-kmxVsQG7y1Kq9yPwMH19hDs21RT128ES7GQjInL2OKlj6f-DCFko4crIK9ZIHuwvrIgmakTsUUCAVTOEeA9tU0nV6vuQiIxXWx55R03JA90"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="text-primary font-bold text-xs uppercase tracking-widest">Recommended Recipe</span>
+<h4 class="text-2xl font-headline font-bold text-on-surface">Chef's Selection</h4>
+</div>
+<button class="bg-primary text-on-primary font-bold px-6 py-2 rounded-full active:scale-95 transition-all shadow-lg shadow-primary/20">
+          Cook Now
+        </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1326]/80 backdrop-blur-lg z-50 rounded-t-3xl shadow-[0_-10px_40px_rgba(75,226,119,0.08)]">
+<a class="flex flex-col items-center justify-center text-[#dae2fd]/60 px-4 py-2 hover:text-[#4be277] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#dae2fd]/60 px-4 py-2 hover:text-[#4be277] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium">Plan</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#22c55e]/20 text-[#4be277] rounded-2xl px-4 py-2 ring-1 ring-[#4be277]/30 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="insights" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#dae2fd]/60 px-4 py-2 hover:text-[#4be277] transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-medium">Profile</span>
+</a>
+</nav>
+</body></html>

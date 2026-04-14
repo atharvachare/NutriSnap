@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriSnap Analyzing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#003840",
+                    "tertiary-fixed": "#00e3fd",
+                    "outline": "#747674",
+                    "error-container": "#9f0519",
+                    "outline-variant": "#474847",
+                    "secondary-container": "#2f4d3b",
+                    "background": "#0d0f0e",
+                    "inverse-surface": "#faf9f7",
+                    "primary-fixed-dim": "#00ec91",
+                    "on-secondary-fixed-variant": "#43624f",
+                    "secondary-fixed": "#c8ebd2",
+                    "tertiary-dim": "#00d4ec",
+                    "on-primary-container": "#005b34",
+                    "secondary": "#c8ebd2",
+                    "on-secondary-fixed": "#274634",
+                    "inverse-primary": "#006d40",
+                    "on-primary-fixed-variant": "#00653b",
+                    "on-secondary-container": "#b6d9c1",
+                    "on-tertiary": "#005762",
+                    "on-secondary": "#395846",
+                    "surface-dim": "#0d0f0e",
+                    "surface-bright": "#2a2d2b",
+                    "surface-container-low": "#121413",
+                    "surface-container": "#181a19",
+                    "on-error": "#490006",
+                    "primary-fixed": "#00fc9b",
+                    "secondary-fixed-dim": "#baddc5",
+                    "tertiary-fixed-dim": "#00d4ec",
+                    "surface-container-lowest": "#000000",
+                    "secondary-dim": "#baddc5",
+                    "on-surface": "#f7f6f4",
+                    "tertiary": "#81ecff",
+                    "on-tertiary-fixed-variant": "#005762",
+                    "surface-variant": "#242625",
+                    "surface-tint": "#a0ffc3",
+                    "surface-container-high": "#1e201f",
+                    "error": "#ff716c",
+                    "error-dim": "#d7383b",
+                    "inverse-on-surface": "#545554",
+                    "on-background": "#f7f6f4",
+                    "on-surface-variant": "#aaaba9",
+                    "on-primary-fixed": "#004527",
+                    "on-primary": "#00643a",
+                    "primary": "#a0ffc3",
+                    "surface": "#0d0f0e",
+                    "primary-container": "#00fc9b",
+                    "primary-dim": "#00ec91",
+                    "on-error-container": "#ffa8a3",
+                    "surface-container-highest": "#242625",
+                    "on-tertiary-container": "#004d57",
+                    "tertiary-container": "#00e3fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            },
+            "animation": {
+                    "pulse-slow": "pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+                    "orbit": "orbit 4s linear infinite",
+            },
+            "keyframes": {
+                    "pulse-slow": {
+                      "0%, 100%": { opacity: 0.4, transform: "scale(1)" },
+                      "50%": { opacity: 0.8, transform: "scale(1.1)" },
+                    },
+                    "orbit": {
+                      "from": { transform: "rotate(0deg)" },
+                      "to": { transform: "rotate(360deg)" },
+                    }
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0d0f0e; color: #f7f6f4; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .text-glow { text-shadow: 0 0 12px rgba(0, 252, 155, 0.6); }
+        .orb-glow { box-shadow: 0 0 40px rgba(0, 252, 155, 0.4), inset 0 0 20px rgba(0, 252, 155, 0.2); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-gradient-to-b from-[#121413] to-transparent">
+<div class="flex flex-col">
+<h1 class="text-2xl font-black text-[#00FF9D] tracking-tighter font-headline">NutriSnap</h1>
+<p class="text-[10px] font-label uppercase tracking-[0.2em] text-slate-400">Make smarter food choices instantly</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#00FF9D] hover:opacity-80 transition-opacity">menu</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User profile photo" data-alt="Professional headshot of a smiling woman with a modern tech aesthetic and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNW28ZJKs5PMYuF9N2mAmRyAORteO3Ul10vfV1sPpNech5P27JiBTgrtR4gLqAM1PBuxXh8Ua23KHmpkclpY5dtlEXQeit_dRZObexfpcBiwtOdXxAkX1tDsGpcc4xKaWYHnAiiH9_q7KX6zGiRpE2A1DnOFZFlYAVvRFn1Sv0EM3xjoT_Mc1VFwNUubvRqaJFSV-eknXQYu9z3eS6AgtziIMFJ_rimwRfK-VDYsFHJqpHgQ7asqqIyLQmOs0iR_KOXJobJkM9lL8"/>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 text-center">
+<!-- AI Analyzing State -->
+<div class="relative w-64 h-64 mb-12 flex items-center justify-center">
+<!-- Outer Pulsing Ring -->
+<div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse-slow"></div>
+<!-- Rotating Orbit Ring -->
+<div class="absolute inset-4 rounded-full border border-dashed border-primary/40 animate-orbit"></div>
+<!-- Core Glowing Orb -->
+<div class="w-32 h-32 rounded-full bg-gradient-to-tr from-primary to-primary-container orb-glow flex items-center justify-center relative overflow-hidden group">
+<span class="material-symbols-outlined text-5xl text-on-primary-container animate-pulse" style="font-variation-settings: 'FILL' 1;">neurology</span>
+<!-- Light Sweep Effect -->
+<div class="absolute inset-0 bg-white/20 -translate-x-full rotate-45 group-hover:translate-x-full transition-transform duration-1000"></div>
+</div>
+<!-- Particles/Decorative Bubbles -->
+<div class="absolute top-0 right-10 w-2 h-2 bg-primary rounded-full blur-[1px] animate-bounce delay-150"></div>
+<div class="absolute bottom-12 left-2 w-3 h-3 bg-tertiary rounded-full blur-[1px] animate-pulse"></div>
+</div>
+<div class="space-y-4 max-w-sm">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight text-glow">Analyzing your needs...</h2>
+<p class="text-on-surface-variant font-body leading-relaxed">
+        Our AI is crafting the perfect meal for your goals. Fetching nutritional data and cross-referencing your preferences...
+      </p>
+</div>
+<!-- Progress Indicator -->
+<div class="mt-12 w-48 h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 rounded-full animate-[progress_2s_ease-in-out_infinite]"></div>
+<style>
+        @keyframes progress {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+      </style>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#1e201f]/60 backdrop-blur-xl rounded-t-[32px] border-t border-[#474847]/15 shadow-[0_-8px_32px_rgba(0,255,157,0.08)]">
+<div class="flex flex-col items-center justify-center text-[#00FF9D] bg-[#00FF9D]/10 rounded-2xl px-5 py-2 active:scale-90 transition-all duration-300 ease-out cursor-pointer">
+<span class="material-symbols-outlined" data-icon="photo_camera" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Scan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-[#a0ffc3] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Plan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-[#a0ffc3] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Insights</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-[#a0ffc3] transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

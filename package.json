@@ -1,0 +1,12 @@
+{
+  "name": "nutrisnap",
+  "version": "1.0.0",
+  "description": "Premium AI Wellness Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

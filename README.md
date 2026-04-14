@@ -1,5 +1,7 @@
 # 🍃 NutriSnap
 
+https://nutrisnapp-109357973816.europe-west1.run.app/
+
 ### **AI-Powered Personalized Indian Nutrition**
 *Bridging the gap between traditional Indian culinary heritage and modern nutritional science.*
 

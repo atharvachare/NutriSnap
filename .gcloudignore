@@ -1,0 +1,8 @@
+.gcloudignore
+.git
+.gitignore
+node_modules
+agent.md
+workflow.md
+stitch/
+.DS_Store
